@@ -1,54 +1,37 @@
-twitter-streaming-demos-node
-==========
+## Twitter Realtime
 
-Basic demos demonstrating Twitter streaming APIs.
+Twitter API + Socket.io + Google Maps API + Notify = Real-time :zap:
 
+![exemplo](example.png "Exemplo da Aplicação rodando")
 
-Installing and Running
-----
+## Como funciona?
 
-Install [Node.js](http://nodejs.org/).
+A brincadeira está em mostrar no mapa o local de um determinado _tweet_ com a hashtag que está sendo monitorada. Se você quer ver como funciona, basta tuitar qualquer coisa contendo a hashtag **#TwitterRealtime** e na hora que for tuitar compartilhar a sua localização.
 
-Clone GitHub repo:
+> Para seu _tweet_ aparecer no mapa a localização é essencial. 
+
+## Testando local
+
+É necessário que você tenha instalado [Socket.io](http://socket.io/) e [Node.js](https://nodejs.org/en/) para rodar o projeto.
 
 ```
-git clone https://github.com/twitterdev/twitter-streaming-demos-node
+git clone git@github.com:thulioph/twitter-realtime.git
 ```
-
-Create a [Twitter application](https://apps.twitter.com).
-
-Create a `config.json` file using `config.sample.json` as a template. Fill in your Twitter App API keys.
-
-
-Install node module dependencies:
 
 ```
 npm install
 ```
 
-Run 1% sample demo:
+```
+node index.js
+```
 
-```
-node stream-sample.js
-```
-Run trending #hashtag demo:
+O servidor irá rodar em: `http://localhost:3000/`
 
-```
-node stream-hashtags.js
-```
-Run geo demo:
+## Outras engines
 
-```
-node stream-geo.js
-```
-Run client-side streaming demo:
+Foi adicionado ao projeto o [Leaflet](http://leafletjs.com/) como engine alternativa para o Google Maps, você pode conferir o exemplo funcionando [nesta branch](https://github.com/thulioph/twitter-realtime/tree/leaflet-js).
 
-```
-Run index.html in a web server environment
-```
-Resources
-----
-- [Twitter API statuses/sample stream](https://dev.twitter.com/streaming/reference/get/statuses/sample)
-- [Twitter API statuses/filter stream](https://dev.twitter.com/streaming/reference/post/statuses/filter)
-- [Twitter REST API Rate Limiting](https://dev.twitter.com/rest/public/rate-limiting)
-- [PubNub Twitter Stream](http://www.pubnub.com/developers/data-streams/twitter-stream)
+## License
+
+[MIT License](http://thulioph.mit-license.org/) © thulioph

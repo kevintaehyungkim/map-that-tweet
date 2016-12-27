@@ -1,0 +1,35 @@
+<section class="wrapper-map">
+
+<!--   <header class="header-primary">
+    <h1>{{ projectName }}</h1>
+    <h3>{{ description }}</h3>
+  </header> -->
+
+  <main id="main" class="main">
+    <aside class="tweet-list">
+
+      <div class="name-description">
+        <h1>{{ projectName }}</h1>
+        <h3>{{ description }}</h3>
+      </div>
+
+      <header><span>{{ feeds.length }}</span>Twitter Stream</header>
+
+      <ul>
+        <li ng-repeat="tweet in feeds">
+          <figure class="avatar-user">
+            <img src="{{ tweet.image }}" alt="{{ tweet.name }}">
+          </figure>
+
+          <div class="content">
+            <h5>@{{ tweet.name }}</h5>
+            <p>{{ tweet.text }}</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <div id="map" class="map"></div>
+  </main>
+
+</section>

@@ -41,19 +41,20 @@ io.sockets.on('connection', function(socket) {
   stream.on('tweet', function(tweet) {
     //only process tweets that have coordinates
 
-    console.log('---');
-    console.log('screen_name:', tweet.user.screen_name);
-    console.log('text:', tweet.text);
-    console.log(tweet.geo.coordinates);
-
     var tweetJSON = {
       text: tweet.text,
       name: tweet.user.screen_name,
       image: tweet.user.profile_image_url,
-      location: tweet.geo.coordinates
     };
 
+    if(tweet.geo)
+      tweetJSON.location = tweet.geo.coordinates;
+
     io.sockets.emit('stream', tweetJSON);
+
+    console.log('---');
+    console.log('screen_name:', tweet.user.screen_name);
+    console.log('text:', tweet.text);
 
   });
 });

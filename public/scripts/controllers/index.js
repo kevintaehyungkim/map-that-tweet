@@ -58,7 +58,7 @@ angular.module('twRealtime')
         position: myLatlng,
         map: map,
         // icon: 'images/tweet_.png'
-        icon: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-32.png'
+        icon: 'https://github.com/kevintaehyungkim/map-that-tweet/blob/master/images/tweet_.png'
       });
 
       infowindow = new google.maps.InfoWindow({

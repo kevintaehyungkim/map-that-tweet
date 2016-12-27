@@ -19,10 +19,10 @@ app.use(express.static(__dirname + '/public'));
 var watchList = ['#jsdayrec', '#jsdayrecife', '#jsday', '#TwitterRealtime'];
 
 var twitter = new Twit({
-  consumer_key: 'z4ebhQjySYZcu5aIHUqKgPJiZ',
-  consumer_secret: '4kVt3glKRLd9dLHIKSi578s4aoZUfmyTwvfonIoXsajOpVWkzF',
-  access_token: '365489318-9syC9NODIhM5vAalAGTrz9W9THf8ToZ2Jmh6baty',
-  access_token_secret: 'OrGLZBFCgSjPqSdbU1LTsSsbKGfszRGyytEfJ9iVmo3q7'
+  consumer_key: 'zgQov9UMoXWwGywxOC0PVuhBc',
+  consumer_secret: 'CIjamtfHT919nWjaBk2eRrO62yUQnrdN5aNuBUtWJaCTHNkrep',
+  access_token: '2679661020-aSXQaLr4Q79MNjUXnWBVtkMj7WYs5SbUv6qhfBt',
+  access_token_secret: '3K3PVh4uzMx5lav0UWQa4pHqMo42T6PXuyM9hBWcIBfpA'
 });
 
 // Sample locations

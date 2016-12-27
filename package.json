@@ -1,7 +1,7 @@
 {
-  "name": "twitter-streaming",
+  "name": "map-that-tweet",
   "version": "1.0.0",
-  "description": "Twitter streaming with socket.io",
+  "description": "Visualize Twitter Updates in Real-Time",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thulioph/twitter-realtime"
+    "url": "https://github.com/kevintaehyungkim/map-that-tweet"
   },
   "keywords": [
     "node",

@@ -39,11 +39,10 @@ angular.module('twRealtime')
     $scope.showMap = function(position) {
       // myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       
-      // Berkeley coordinates
-      myLatlng = new google.maps.LatLng(37.8716, -122.2727);
+      myLatlng = new google.maps.LatLng(42.606466, -0.323780);
 
       mapOptions = {
-        zoom: 9,
+        zoom: 2,
         center: myLatlng,
         panControl: false,
         scrollwheel: false,
@@ -57,14 +56,13 @@ angular.module('twRealtime')
       marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        // icon: 'images/tweet_.png'
-        icon: 'https://github.com/kevintaehyungkim/map-that-tweet/blob/master/images/tweet_.png'
+        icon: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-32.png'
       });
 
-      infowindow = new google.maps.InfoWindow({
-        content: 'You are here!',
-        maxWidth: 700
-      });
+      // infowindow = new google.maps.InfoWindow({
+      //   content: 'You are here!',
+      //   maxWidth: 700
+      // });
 
       infowindow.open(map, marker);
 

@@ -2,7 +2,7 @@
 
 Visualize Twitter Updates in Real-Time
 
-<img src="https://raw.githubusercontent.com/kevintaehyungkim/map-that-tweet/example.png" width="400">
+<img src="https://raw.githubusercontent.com/kevintaehyungkim/map-that-tweet/master/example.png" width="400">
 
 ## Local Testing
 

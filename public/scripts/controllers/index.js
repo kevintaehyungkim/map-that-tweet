@@ -7,6 +7,7 @@
  * # IndexCtrl
  * Controller of the twRealtime
  */
+ 
 angular.module('twRealtime')
   .controller('IndexCtrl', ['$scope', 'TwitterService', function ($scope, TwitterService) {
 
@@ -17,7 +18,7 @@ angular.module('twRealtime')
     TwitterService.getFeeds(function(data) {
       $scope.showTweets(data.text, data.name, data.image);
 
-      //If the tweet has location
+      //If the tweet has geo-location
       if(data.location)
         $scope.showMapTweet(data.text, data.name, data.image, data.location);
     });
@@ -37,8 +38,7 @@ angular.module('twRealtime')
     };
 
     $scope.showMap = function(position) {
-      // myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      
+
       myLatlng = new google.maps.LatLng(42.606466, -0.323780);
 
       mapOptions = {
@@ -59,14 +59,9 @@ angular.module('twRealtime')
         icon: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-32.png'
       });
 
-      // infowindow = new google.maps.InfoWindow({
-      //   content: 'You are here!',
-      //   maxWidth: 700
-      // });
-
       infowindow.open(map, marker);
 
-      // Estilizando o mapa;
+      // Map Stylization
       styles = [
         {
           stylers: [
@@ -115,7 +110,7 @@ angular.module('twRealtime')
         name: "TwitterRealtime"
       });
 
-      // Aplicando as configurações do mapa
+      // Map Configurations
       map.mapTypes.set('map_devfestne', styledMap);
       map.setMapTypeId('map_devfestne');
 
@@ -148,13 +143,6 @@ angular.module('twRealtime')
         markers.shift();
       }
 
-      // infowindow = new google.maps.InfoWindow({
-      //   content: text,
-      //   maxWidth: 700
-      // });
-
-      // infowindow.open(map, marker);
-
       $scope.openNofify(name, text, image);
     };
 
@@ -184,7 +172,6 @@ angular.module('twRealtime')
         image: image
       }
 
-      // força a renderização da view
       $scope.$apply(function() {
         $scope.feeds.push(data);
       });

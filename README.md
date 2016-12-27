@@ -1,6 +1,6 @@
-## Twitter Realtime
+## Map that Tweet
 
-Twitter API + Socket.io + Google Maps API + Notify = Real-time :zap:
+Visualize Twitter Updates in Real-Time
 
 ![exemplo](example.png "Exemplo da Aplicação rodando")
 

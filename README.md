@@ -2,12 +2,12 @@
 
 Visualize Twitter Updates in Real-Time
 
-![example](example.png "Map that Tweet Example")
+<img src="https://raw.githubusercontent.com/kevintaehyungkim/map-that-tweet/example.png" width="400">
 
 ## Local Testing
 
 ```
-git clone git@github.com:kevintaehyungkim/map-that-tweet.git
+git clone https://github.com/kevintaehyungkim/map-that-tweet.git
 ```
 
 ```

@@ -2,7 +2,7 @@
 
 Visualize Twitter Updates in Real-Time
 
-![exemplo](example.png "Map that Tweet Example")
+![example](example.png "Map that Tweet Example")
 
 ## Local Testing
 
@@ -18,5 +18,6 @@ npm install
 node index.js
 ```
 
+```
 http://localhost:3000/
 ```

@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <meta name="viewport" content="initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" href="stylesheets/style.css"/>
+    <script src="http://cdn.pubnub.com/pubnub.min.js">
+    <script type="text/javascript" src="stream-geo.js"></script>
     <title>Map that Tweet</title>
+
+    <script>
+      PUBNUB.init({
+        subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
+        }).subscribe({
+        channel : 'pubnub-twitter',
+        message : function(msg){ console.log(msg) }
+        });
+    </script>
   </head>
 
   <body>

@@ -5,7 +5,7 @@ var Twit = require('twit');
 var io = require('socket.io')(http);
 
 http.listen(3000, function(){
-  console.log('listening on *:3000');
+  console.log('listening on port 3000');
 });
 
 app.get('/', function(req, res){
@@ -14,10 +14,7 @@ app.get('/', function(req, res){
 
 app.use(express.static(__dirname + '/public'));
 
-
-// Twitter
-var watchList = ['#jsdayrec', '#jsdayrecife', '#jsday', '#TwitterRealtime'];
-
+//Twitter
 var twitter = new Twit({
   consumer_key: 'zgQov9UMoXWwGywxOC0PVuhBc',
   consumer_secret: 'CIjamtfHT919nWjaBk2eRrO62yUQnrdN5aNuBUtWJaCTHNkrep',
@@ -31,6 +28,9 @@ var locations = {
   nyc: '-74,40,-73,41',
   all: '-180,-90,180,90'
 };
+
+// Sample terms
+var watchList = ['#2016', '#newyear', '#christmas'];
 
 // Socket
 io.sockets.on('connection', function(socket) {

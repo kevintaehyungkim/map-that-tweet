@@ -39,8 +39,10 @@ angular.module('twRealtime')
 
     $scope.showMap = function(position) {
 
+      // Center coordinates of world map
       myLatlng = new google.maps.LatLng(42.606466, -0.323780);
 
+      // Google Maps Options
       mapOptions = {
         zoom: 2,
         center: myLatlng,
@@ -135,13 +137,13 @@ angular.module('twRealtime')
 
       marker.setMap(map);
 
-      markers.push(marker);
-
       // Remove old markers when there are more than 300 on the map.
       if (markers.length > 300) {
         markers[0].setMap(null);
         markers.shift();
       }
+
+      markers.push(marker);
 
       $scope.openNofify(name, text, image);
     };
